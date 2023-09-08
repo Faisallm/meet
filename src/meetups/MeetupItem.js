@@ -5,7 +5,7 @@ import Card from "../ui/Card";
 
 function MeetupItem(props) {
   return (
-    <li className={classes.item} key={props.key}>
+    <li className={classes.item} key={props.id}>
       <Card>
         <div className={classes.image}>
           <img src={props.image} alt={props.title} />

@@ -3,7 +3,7 @@ import classes from "./NewMeetupForm.module.css";
 // the useRef is a hook
 import { useRef } from "react";
 
-function NewMeetupForm() {
+function NewMeetupForm(props) {
   // will give us direct access to title input element
   const titleInputRef = useRef();
   const imageInputRef = useRef();
@@ -38,7 +38,9 @@ function NewMeetupForm() {
       description: enteredDescription,
     };
 
-    console.log(meetupData);
+    // we can move data up and down components...
+    // parents and children.
+    props.onAddMeetup(meetupData);
   }
 
   return (
